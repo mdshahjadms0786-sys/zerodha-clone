@@ -12,11 +12,14 @@ const BuyActionWindow = ({ uid }) => {
   const generalContext = useContext(GeneralContext);
 
   const handleBuyClick = () => {
+    const token = localStorage.getItem("dash_token");
     axios.post("http://localhost:3002/newOrder", {
       name: uid,
       qty: parseInt(stockQuantity, 10),
       price: parseFloat(stockPrice),
       mode: "BUY",
+    }, {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
     }).then(() => {
       generalContext.closeBuyWindow();
     }).catch((error) => {

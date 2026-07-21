@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -14,8 +17,22 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
+
+  const initials = user
+    ? user.name
+        .split(" ")
+        .map((n) => n[0])
+        .join("")
+        .toUpperCase()
+        .slice(0, 2)
+    : "ZU";
 
   return (
     <div className="menu-container">
@@ -91,9 +108,47 @@ const Menu = () => {
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+          <div className="avatar">{initials}</div>
+          <p className="username">{user?.name?.toUpperCase() || "USERID"}</p>
         </div>
+        {isProfileDropdownOpen && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "60px",
+              left: "10px",
+              background: "#fff",
+              border: "1px solid #ddd",
+              borderRadius: "4px",
+              padding: "8px 0",
+              minWidth: "160px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+              zIndex: 100,
+            }}
+          >
+            <div
+              style={{
+                padding: "8px 16px",
+                fontSize: "13px",
+                color: "#333",
+                borderBottom: "1px solid #eee",
+              }}
+            >
+              {user?.email}
+            </div>
+            <div
+              onClick={handleLogout}
+              style={{
+                padding: "8px 16px",
+                fontSize: "13px",
+                color: "#d32f2f",
+                cursor: "pointer",
+              }}
+            >
+              Logout
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

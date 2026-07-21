@@ -1,28 +1,58 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { Link } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 
 function Signup() {
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-  const navigate = useNavigate();
+  const { signup } = useAuth();
 
-  const handlePhoneChange = (e) => {
-    setPhone(e.target.value);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError("");
   };
 
-  const handleGetOTP = () => {
-    if (!phone || phone.length < 10) {
-      setMessage("Please enter a valid 10-digit mobile number");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!formData.name || !formData.email || !formData.phone || !formData.password) {
+      setError("All fields are required");
       return;
     }
-    axios.post("http://localhost:3002/signup", { phone })
-      .then((res) => {
-        setMessage(res.data.message);
-      })
-      .catch((err) => {
-        setMessage(err.response?.data?.error || "Something went wrong");
-      });
+
+    if (formData.password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+      setError("Please enter a valid 10-digit Indian mobile number");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const data = await signup(formData.name, formData.email, formData.phone, formData.password);
+      window.location.href = `http://localhost:3001?token=${data.token}`;
+    } catch (err) {
+      setError(err.response?.data?.error || "Signup failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -42,38 +72,105 @@ function Signup() {
             <img src="media/images/account_open.svg" alt="account opening" className="img-fluid" style={{ maxHeight: "400px" }} />
           </div>
           <div className="col-md-6">
-            <h3 className="fw-bold mb-1">Signup now</h3>
-            <p className="text-muted mb-3">Or track your existing application</p>
-            <div className="border rounded p-4" style={{ maxWidth: "400px" }}>
-              <div className="mb-3">
-                <div className="d-flex align-items-center border rounded px-3 py-2">
-                  <img src="media/images/india-flag.svg" alt="India" style={{ height: "20px", marginRight: "8px" }} />
-                  <span className="me-2">+91</span>
+            <h3 className="fw-bold mb-1">Create your account</h3>
+            <p className="text-muted mb-3">Already have an account? <Link to="/login" className="text-primary">Log in</Link></p>
+            <div className="border rounded p-4" style={{ maxWidth: "450px" }}>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label className="form-label small fw-semibold">Full name</label>
                   <input
-                    type="number"
-                    className="form-control border-0 p-0"
-                    placeholder="Enter your mobile number"
-                    value={phone}
-                    onChange={handlePhoneChange}
-                    style={{ outline: "none", boxShadow: "none" }}
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    placeholder="Enter your full name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
-              </div>
-              {message && (
-                <div className={`alert ${message.includes("successfully") ? "alert-success" : "alert-danger"} py-2 small`}>
-                  {message}
+
+                <div className="mb-3">
+                  <label className="form-label small fw-semibold">Email address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control"
+                    placeholder="Enter your email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-              )}
-              <button className="btn btn-primary w-100 py-2 fs-5 mb-3" onClick={handleGetOTP}>
-                Get OTP
-              </button>
-              <p className="text-muted small mb-0">
-                By proceeding, you agree to the Zerodha terms & privacy policy
-              </p>
-              <hr />
-              <p className="small">
-                Looking to open NRI account? <span className="text-decoration-none" style={{cursor:"default"}}>Click here</span>
-              </p>
+
+                <div className="mb-3">
+                  <label className="form-label small fw-semibold">Mobile number</label>
+                  <div className="d-flex align-items-center border rounded px-3 py-1">
+                    <img src="media/images/india-flag.svg" alt="India" style={{ height: "20px", marginRight: "8px" }} />
+                    <span className="me-2 text-muted">+91</span>
+                    <input
+                      type="tel"
+                      name="phone"
+                      className="form-control border-0 p-0"
+                      placeholder="Enter your mobile number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      style={{ outline: "none", boxShadow: "none" }}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label small fw-semibold">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    className="form-control"
+                    placeholder="Create a password (min 6 characters)"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label small fw-semibold">Confirm password</label>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    className="form-control"
+                    placeholder="Confirm your password"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                {error && (
+                  <div className="alert alert-danger py-2 small">
+                    {error}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  className="btn btn-primary w-100 py-2 fs-5 mb-3"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <span>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Creating account...
+                    </span>
+                  ) : (
+                    "Create account"
+                  )}
+                </button>
+
+                <p className="text-muted small mb-0 text-center">
+                  By proceeding, you agree to the Zerodha terms & privacy policy
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -225,9 +322,9 @@ function Signup() {
         <div className="container">
           <h2 className="fw-bold mb-3">Open a Zerodha account</h2>
           <p className="text-muted mb-4">Simple and intuitive apps · ₹0 for investments · ₹20 for intraday and F&O trades.</p>
-          <button className="btn btn-primary px-5 py-3 fs-5" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            Signup for free
-          </button>
+          <Link to="/signup" className="btn btn-primary px-5 py-3 fs-5">
+            Sign up for free
+          </Link>
         </div>
       </div>
     </div>
