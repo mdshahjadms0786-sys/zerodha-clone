@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Signup() {
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleGetOTP = () => {
+    if (!phone || phone.length < 10) {
+      setMessage("Please enter a valid 10-digit mobile number");
+      return;
+    }
+    axios.post("http://localhost:3002/signup", { phone })
+      .then((res) => {
+        setMessage(res.data.message);
+      })
+      .catch((err) => {
+        setMessage(err.response?.data?.error || "Something went wrong");
+      });
+  };
+
   return (
     <div className="signup-page">
       <div className="text-center py-5" style={{ backgroundColor: "#f8f9fa" }}>
@@ -29,22 +53,29 @@ function Signup() {
                     type="number"
                     className="form-control border-0 p-0"
                     placeholder="Enter your mobile number"
+                    value={phone}
+                    onChange={handlePhoneChange}
                     style={{ outline: "none", boxShadow: "none" }}
                   />
                 </div>
               </div>
-              <button className="btn btn-primary w-100 py-2 fs-5 mb-3">
+              {message && (
+                <div className={`alert ${message.includes("successfully") ? "alert-success" : "alert-danger"} py-2 small`}>
+                  {message}
+                </div>
+              )}
+              <button className="btn btn-primary w-100 py-2 fs-5 mb-3" onClick={handleGetOTP}>
                 Get OTP
               </button>
               <p className="text-muted small mb-0">
                 By proceeding, you agree to the Zerodha
-                <a href="" className="text-decoration-none"> terms</a>
+                <a href="https://zerodha.com/terms-and-conditions" target="_blank" rel="noreferrer" className="text-decoration-none"> terms</a>
                 &
-                <a href="" className="text-decoration-none"> privacy policy</a>
+                <a href="https://zerodha.com/privacy-policy" target="_blank" rel="noreferrer" className="text-decoration-none"> privacy policy</a>
               </p>
               <hr />
               <p className="small">
-                Looking to open NRI account? <a href="" className="text-decoration-none">Click here</a>
+                Looking to open NRI account? <a href="https://zerodha.com/open-account/nri/" target="_blank" rel="noreferrer" className="text-decoration-none">Click here</a>
               </p>
             </div>
           </div>
@@ -56,7 +87,7 @@ function Signup() {
           <h4 className="fw-bold">Already have a demat account?</h4>
           <p className="text-muted">
             Move your holdings to Zerodha and we'll cover your transfer costs, up to ₹500,
-            <a href="" className="text-decoration-none"> learn more</a>.
+            <a href="https://support.zerodha.com" target="_blank" rel="noreferrer" className="text-decoration-none"> learn more</a>.
           </p>
         </div>
       </div>
@@ -94,7 +125,7 @@ function Signup() {
           </div>
         </div>
         <div className="text-center mt-3">
-          <a href="" className="btn btn-outline-primary px-4 py-2">Explore Investments</a>
+          <a href="https://zerodha.com/investments/" target="_blank" rel="noreferrer" className="btn btn-outline-primary px-4 py-2">Explore Investments</a>
         </div>
       </div>
 
@@ -197,7 +228,9 @@ function Signup() {
         <div className="container">
           <h2 className="fw-bold mb-3">Open a Zerodha account</h2>
           <p className="text-muted mb-4">Simple and intuitive apps · ₹0 for investments · ₹20 for intraday and F&O trades.</p>
-          <button className="btn btn-primary px-5 py-3 fs-5">Signup for free</button>
+          <button className="btn btn-primary px-5 py-3 fs-5" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            Signup for free
+          </button>
         </div>
       </div>
     </div>

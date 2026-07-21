@@ -8,6 +8,8 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
+let signups = [];
+
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
@@ -31,6 +33,20 @@ app.get("/allPositions", async (req, res) => {
     res.json(allPositions);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch positions", details: error.message });
+  }
+});
+
+app.post("/signup", async (req, res) => {
+  try {
+    const { phone } = req.body;
+    if (!phone) {
+      return res.status(400).json({ error: "Phone number is required" });
+    }
+    signups.push({ phone, createdAt: new Date() });
+    console.log("New signup:", phone);
+    res.json({ message: "OTP sent successfully!", success: true });
+  } catch (error) {
+    res.status(500).json({ error: "Signup failed", details: error.message });
   }
 });
 

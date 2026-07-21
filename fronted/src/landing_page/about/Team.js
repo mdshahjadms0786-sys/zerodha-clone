@@ -31,8 +31,8 @@ function Team() {
           </p>
           <p>Playing basketball is his zen.</p>
           <p>
-            Connect on <a href="">Homepage</a> / <a href="">TradingQnA</a> /{" "}
-            <a href="">Twitter</a>
+            Connect on <a href="https://nithinkamath.com" target="_blank" rel="noreferrer">Homepage</a> / <a href="https://tradingqna.com" target="_blank" rel="noreferrer">TradingQnA</a> /{" "}
+            <a href="https://x.com/nithinkamath" target="_blank" rel="noreferrer">Twitter</a>
           </p>
         </div>
       </div>
