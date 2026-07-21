@@ -68,14 +68,11 @@ function Signup() {
                 Get OTP
               </button>
               <p className="text-muted small mb-0">
-                By proceeding, you agree to the Zerodha
-                <a href="https://zerodha.com/terms-and-conditions" target="_blank" rel="noreferrer" className="text-decoration-none"> terms</a>
-                &
-                <a href="https://zerodha.com/privacy-policy" target="_blank" rel="noreferrer" className="text-decoration-none"> privacy policy</a>
+                By proceeding, you agree to the Zerodha terms & privacy policy
               </p>
               <hr />
               <p className="small">
-                Looking to open NRI account? <a href="https://zerodha.com/open-account/nri/" target="_blank" rel="noreferrer" className="text-decoration-none">Click here</a>
+                Looking to open NRI account? <span className="text-decoration-none" style={{cursor:"default"}}>Click here</span>
               </p>
             </div>
           </div>
@@ -87,7 +84,7 @@ function Signup() {
           <h4 className="fw-bold">Already have a demat account?</h4>
           <p className="text-muted">
             Move your holdings to Zerodha and we'll cover your transfer costs, up to ₹500,
-            <a href="https://support.zerodha.com" target="_blank" rel="noreferrer" className="text-decoration-none"> learn more</a>.
+            <span className="text-decoration-none" style={{cursor:"default"}}> learn more</span>.
           </p>
         </div>
       </div>
@@ -125,7 +122,7 @@ function Signup() {
           </div>
         </div>
         <div className="text-center mt-3">
-          <a href="https://zerodha.com/investments/" target="_blank" rel="noreferrer" className="btn btn-outline-primary px-4 py-2">Explore Investments</a>
+          <span className="btn btn-outline-primary px-4 py-2" style={{cursor:"default"}}>Explore Investments</span>
         </div>
       </div>
 

@@ -1,6 +1,11 @@
 import React from "react";
 
 function RightSection({ imageURL, productName, productDesription, learnMore }) {
+  const handleClick = (e) => {
+    if (e.currentTarget.getAttribute("href") === "#") {
+      e.preventDefault();
+    }
+  };
   return (
     <div className="container mt-5">
       <div className="row">
@@ -8,7 +13,7 @@ function RightSection({ imageURL, productName, productDesription, learnMore }) {
           <h1>{productName}</h1>
           <p>{productDesription}</p>
           <div>
-            <a href={learnMore}>Learn More</a>
+            <a href={learnMore} onClick={handleClick}>Learn More</a>
           </div>
         </div>
         <div className="col-6">

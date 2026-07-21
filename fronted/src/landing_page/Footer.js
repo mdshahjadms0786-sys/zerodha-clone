@@ -20,37 +20,37 @@ function Footer() {
             <br />
             <Link to="/pricing">Pricing</Link>
             <br />
-            <a href="https://zerodha.com/refer/" target="_blank" rel="noreferrer">Referral programme</a>
+            <span>Referral programme</span>
             <br />
-            <a href="https://careers.zerodha.com" target="_blank" rel="noreferrer">Careers</a>
+            <span>Careers</span>
             <br />
-            <a href="https://zerodha.tech" target="_blank" rel="noreferrer">Zerodha.tech</a>
+            <span>Zerodha.tech</span>
             <br />
-            <a href="https://zerodha.com/media/" target="_blank" rel="noreferrer">Press & media</a>
+            <span>Press & media</span>
             <br />
-            <a href="https://zerodha.com/cares/" target="_blank" rel="noreferrer">Zerodha cares (CSR)</a>
+            <span>Zerodha cares (CSR)</span>
             <br />
           </div>
           <div className="col">
             <p>Support</p>
             <Link to="/support">Contact</Link>
             <br />
-            <a href="https://support.zerodha.com" target="_blank" rel="noreferrer">Support portal</a>
+            <span>Support portal</span>
             <br />
-            <a href="https://zerodha.com/z-connect/" target="_blank" rel="noreferrer">Z-Connect blog</a>
+            <span>Z-Connect blog</span>
             <br />
-            <a href="https://zerodha.com/charges/" target="_blank" rel="noreferrer">List of charges</a>
+            <Link to="/pricing">List of charges</Link>
             <br />
-            <a href="https://zerodha.com/resources/" target="_blank" rel="noreferrer">Downloads & resources</a>
+            <span>Downloads & resources</span>
             <br />
           </div>
           <div className="col">
             <p>Account</p>
             <Link to="/signup">Open an account</Link>
             <br />
-            <a href="https://zerodha.com/fund-transfer/" target="_blank" rel="noreferrer">Fund transfer</a>
+            <span>Fund transfer</span>
             <br />
-            <a href="https://zerodha.com/60-day-challenge/" target="_blank" rel="noreferrer">60 day challenge</a>
+            <span>60 day challenge</span>
             <br />
           </div>
         </div>

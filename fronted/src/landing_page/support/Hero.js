@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
     <section className="container-fluid" id="supportHero">
       <div className="p-5 " id="supportWrapper">
         <h4>Support Portal</h4>
-        <a href="https://support.zerodha.com/tickets" target="_blank" rel="noreferrer">Track Tickets</a>
+        <Link to="/support">Track Tickets</Link>
       </div>
       <div className="row p-5 m-3">
         <div className="col-6 p-3">
@@ -14,20 +15,16 @@ function Hero() {
           </h1>
           <input placeholder="Eg. how do I activate F&O" />
           <br />
-          <a href="https://support.zerodha.com/category/account-opening/resident-individual" target="_blank" rel="noreferrer">Track account opening</a>
-          <a href="https://support.zerodha.com" target="_blank" rel="noreferrer">Track segment activation</a>
-          <a href="https://zerodha.com/margin-calculator/" target="_blank" rel="noreferrer">Intraday margins</a>
-          <a href="https://kite.zerodha.com" target="_blank" rel="noreferrer">Kite user manual</a>
+          <span>Track account opening</span>
+          <span>Track segment activation</span>
+          <span>Intraday margins</span>
+          <span>Kite user manual</span>
         </div>
         <div className="col-6 p-3">
           <h1 className="fs-3">Featured</h1>
           <ol>
-            <li>
-              <a href="https://support.zerodha.com" target="_blank" rel="noreferrer">Current Takeovers and Delisting - January 2024</a>
-            </li>
-            <li>
-              <a href="https://support.zerodha.com" target="_blank" rel="noreferrer">Latest Intraday leverages - MIS & CO</a>
-            </li>
+            <li><span>Current Takeovers and Delisting - January 2024</span></li>
+            <li><span>Latest Intraday leverages - MIS & CO</span></li>
           </ol>
         </div>
       </div>

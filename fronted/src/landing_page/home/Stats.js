@@ -36,10 +36,10 @@ function Stats() {
               Explore our products{" "}
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </Link>
-            <a href="https://kite-demo.zerodha.com" target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
+            <span style={{ textDecoration: "none", cursor: "default" }}>
               Try Kite demo{" "}
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            </a>
+            </span>
           </div>
         </div>
       </div>
