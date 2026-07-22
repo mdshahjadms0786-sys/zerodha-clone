@@ -1,1 +1,41 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="content-security-policy" content="default-src &#39;none&#39;; script-src &#39;nonce-u3g2AHFXyIr12N4xh6JJsF&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce="u3g2AHFXyIr12N4xh6JJsF">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'iZoSl8uiF7dlYNykmVLn2PvvGk_JEXUSfdLeoNDvoDI-1784623892-1.2.1.1-JWmLvyYWlwXNdxWInMx5RjwJzVyITe9VeSBIE1lWZ0busp5TTLkAPPzELNycBdmw',cITimeS: '1784623892',cN: 'u3g2AHFXyIr12N4xh6JJsF',cRay: 'a1e8f6e2e81f6629',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/static/images/largest-broker.svg?__cf_chl_tk=cp3iGXMAyq3IE82RCY5.PG58CGO3hTDx7zivGdGXOPM-1784623892-1.0.1.1-e7H8_3d_ekqLM16cQ88Go8yDbiL5iGnGq1KQfsRiyaU",cvId: '3',cZone: 'zerodha.com',fa:"/static/images/largest-broker.svg?__cf_chl_f_tk=cp3iGXMAyq3IE82RCY5.PG58CGO3hTDx7zivGdGXOPM-1784623892-1.0.1.1-e7H8_3d_ekqLM16cQ88Go8yDbiL5iGnGq1KQfsRiyaU",md: 'OzCWrW2kEH00BopMZqCoBo2_N4UiUfObdv6jd64lJeE-1784623892-1.2.1.1-HrdwWZACrU.obL9OWBD3LzUhy2d4GhpWwA5PwbedKmNwK1qvPdrQlYYQZe9Nd28jvGvRv3ej1VVOGNHmIyaurDYekedK9QU7rcudUHlvzQjqckJGRlFDkGRQ_7OtgXTIRr3HTmye.seMs17h9PIxMYaQF8eDWKtjO5CNdpN5QCTICT20WOT9rd82uhbjqC..fasAAty4pwOg4IO4Bxk4s9Gzg_VllWspUJbeSzK8Me5joYxo8rAG0qmMC3wpP6druS8ovNKUu4__u7.IYWNRoIoghOrV0lKeLIvYNRFM_zzGfFmCxkEKAuaW25cUo6_iPn.u2dCOOcsqEh9W2Dl01BJJSiuuvfl6SrOspmGl1hXonptIw9oLYcekEYWHaI4Av_2u5woJMyr8cfNx7oviSJRcnxhGv6gUZGm8.ysR_TJLSADhZn3YFsei6f5fMpv9QB8jTngp.Tp7j6c7ko..tfopJDzIT_fTF8Bs4JmOjQGWHx73mdp9JzFwo3MTImcYqcQIM75pvQeU1tehIk2SXkoQfK1oHUZcKSYbVkJ5X_fuTcGngIhQ49J5orrZ5FLWt6TzP3iSZdlsS4FuYLMas7k4r1yzfgUEuNJFOw4IAHvUBTZnpi79F85CQ5y7e.OfN9LG1ksho9lE4tgAaI6o4uomrvPgyR1f.WuvD2i4PMlY_hjIfL31spjkiR6NgbsRTfKQZqIQ9Qpj_biNgROLCSmmAbSUeENw52uu3JdzJdv_DNj3Fwvp.yEzG55CI7ovzabY3ZCb73kYmaSb3cEI3BK075Pyu7ZvCbugq90EWGbp.ZkwUVgXV65EwPKb3nQgtijRKtv4ag4Jmem1nbg8TDy2uZA7EPtE767Ab7rA7dB1BAbWvFldJxjw9vcuG_mo9IkFoVdt57DK3OC5Zgpl4VVF1xz_Nwx8_CzhBbPEEUwtWz0zvZZMNekEDFnncjRn.NugPB.k_cq91dtCP2Of5nQ31oaTOiGjrwVhn58d4V77MTeqlmWSarJfGTZ3Ghv1.Q7ZXQ0oFSYdyLeO_U7tDHwlX_DSRVfpIB5e.WAcpVHNbFTzhYCft7Eo48F4S2rnlFvJar8jbn7CZs49CbtBijovdwqW4PwchFVCRQmYkoU7Bv9L_rtZmJAihHcP_6dUy8g0QxwVntTeIh62bRjSk3z4vC65VFKo26Ujglh2xQU',mdrd: 'csEcgbxKtKdBlrK5luRxYsGZOGS9kJECPvsYokV1D.E-1784623892-1.2.1.1-dzI3cQQA7i.gKrTfWkp.S.xJac2RG5iaS_XL1RZZw5BBFpU6ZiEF9h7qLnmRgbZ1ZMbkPfCAfBr3zAPcpdNMuF2fD5zrt8gUl2WFC2oB_5X_yxKHXOyAtfjPMSDfXSCh74w7g8KGuvv_IgNMDAlXZ3PINAtMdOQqUS40lY2T9h5fH7acYcXSzdhl1iQryAJuct7M2ZuHGxLNs4cza3V8t5xSEnFjH60l1ALTZnkGSEB3U3UKM5AQwVSYbLV.Ut2Thc_rvY40aBzz3CIFQv4jsmVx6SfsZfRJGO8zPRuRDJU',};var a = document.createElement('script');a.nonce = 'u3g2AHFXyIr12N4xh6JJsF';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a1e8f6e2e81f6629';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/static/images/largest-broker.svg?__cf_chl_rt_tk=cp3iGXMAyq3IE82RCY5.PG58CGO3hTDx7zivGdGXOPM-1784623892-1.0.1.1-e7H8_3d_ekqLM16cQ88Go8yDbiL5iGnGq1KQfsRiyaU"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <rect width="500" height="400" fill="#f0f4ff" rx="20"/>
+  <text x="250" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#387ed1">Zerodha Presence Across India</text>
+  <circle cx="250" cy="180" r="80" fill="#387ed1" opacity="0.08"/>
+  <circle cx="250" cy="180" r="55" fill="#387ed1" opacity="0.12"/>
+  <circle cx="250" cy="180" r="30" fill="#387ed1" opacity="0.25"/>
+  <circle cx="250" cy="180" r="8" fill="#387ed1"/>
+  <g stroke="#387ed1" stroke-width="1.5" opacity="0.4" fill="none">
+    <line x1="250" y1="180" x2="120" y2="100"/>
+    <line x1="250" y1="180" x2="380" y2="90"/>
+    <line x1="250" y1="180" x2="100" y2="260"/>
+    <line x1="250" y1="180" x2="400" y2="270"/>
+    <line x1="250" y1="180" x2="250" y2="60"/>
+    <line x1="250" y1="180" x2="170" y2="320"/>
+    <line x1="250" y1="180" x2="340" y2="330"/>
+    <line x1="250" y1="180" x2="60" y2="180"/>
+    <line x1="250" y1="180" x2="440" y2="170"/>
+  </g>
+  <g fill="#387ed1" opacity="0.7">
+    <circle cx="120" cy="100" r="4"/>
+    <circle cx="380" cy="90" r="4"/>
+    <circle cx="100" cy="260" r="4"/>
+    <circle cx="400" cy="270" r="4"/>
+    <circle cx="250" cy="60" r="4"/>
+    <circle cx="170" cy="320" r="4"/>
+    <circle cx="340" cy="330" r="4"/>
+    <circle cx="60" cy="180" r="4"/>
+    <circle cx="440" cy="170" r="4"/>
+  </g>
+  <text x="120" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Mumbai</text>
+  <text x="380" y="85" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Delhi</text>
+  <text x="100" y="275" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Chennai</text>
+  <text x="400" y="285" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Kolkata</text>
+  <text x="250" y="55" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Bengaluru</text>
+  <text x="170" y="335" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Hyderabad</text>
+  <text x="340" y="345" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Pune</text>
+  <text x="60" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Ahmedabad</text>
+  <text x="440" y="165" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">Bhubaneswar</text>
+  <rect x="150" y="340" width="200" height="40" rx="8" fill="#387ed1" opacity="0.1"/>
+  <text x="250" y="365" text-anchor="middle" font-family="Arial" font-size="14" fill="#387ed1" font-weight="bold">2,000+ cities across India</text>
+</svg>
