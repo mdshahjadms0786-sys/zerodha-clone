@@ -49,7 +49,9 @@ function Signup() {
       const data = await signup(formData.name, formData.email, formData.phone, formData.password);
       window.location.href = `http://localhost:3001?token=${data.token}`;
     } catch (err) {
-      setError(err.response?.data?.error || "Signup failed. Please try again.");
+      const backendMsg = err.response?.data?.details;
+      const mainMsg = err.response?.data?.error || "Signup failed. Please try again.";
+      setError(backendMsg ? `${mainMsg}: ${backendMsg}` : mainMsg);
     } finally {
       setLoading(false);
     }

@@ -24,7 +24,9 @@ function Login() {
       const data = await login(email, password);
       window.location.href = `http://localhost:3001?token=${data.token}`;
     } catch (err) {
-      setError(err.response?.data?.error || "Login failed. Please try again.");
+      const backendMsg = err.response?.data?.details;
+      const mainMsg = err.response?.data?.error || "Login failed. Please try again.";
+      setError(backendMsg ? `${mainMsg}: ${backendMsg}` : mainMsg);
     } finally {
       setLoading(false);
     }

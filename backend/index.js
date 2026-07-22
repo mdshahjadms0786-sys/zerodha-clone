@@ -62,6 +62,7 @@ app.post("/api/auth/signup", async (req, res) => {
     if (error.code === 11000) {
       return res.status(409).json({ error: "An account with this email already exists" });
     }
+    console.error("Signup error:", error);
     res.status(500).json({ error: "Signup failed", details: error.message });
   }
 });
@@ -97,6 +98,7 @@ app.post("/api/auth/login", async (req, res) => {
       },
     });
   } catch (error) {
+    console.error("Login error:", error);
     res.status(500).json({ error: "Login failed", details: error.message });
   }
 });
