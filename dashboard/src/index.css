@@ -841,3 +841,26 @@ hr {
 .action:hover {
   background-color: rgb(212, 212, 212);
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.text-success {
+  color: #4caf50;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-primary {
+  color: #4184f3;
+}
